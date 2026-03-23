@@ -1,32 +1,25 @@
-8-Bit-Arithmetic-Operations-using-8085
-Aim:
-To perform 8-bit arithmetic operations such as addition, subtraction, multiplication, and division using the 8085 microprocessor. Apparatus Required: • Laptop with internet connection
+# 8085 Microprocessor - 8-Bit Arithmetic Operations  
 
-Algorithm:
-For Addition (With Carry Consideration):
-Load the first number from memory location 4200H into register A.
-Load the second number from memory location 4201H into register B.
-Add the contents of registers A and B.
-If carry is generated, store carry in 4301H.
-Store the sum in memory location 4300H.
-For Subtraction (Considering Greater Number):
-Load the first number from memory location 4200H into register A.
-Load the second number from memory location 4201H into register B.
-Compare A and B.
-If A < B, swap the values of A and B to ensure positive result.
-Subtract the content of B from A.
-Store the result in memory location 4300H.
-For Multiplication:
-Load the first number from memory location 4200H into register A.
-Load the second number from memory location 4201H into register B.
-Multiply A and B using repeated addition.
-Store the result in memory locations 4300H and 4301H (if required for higher bits).
-For Division:
-Load the dividend from memory location 4200H into register A.
-Load the divisor from memory location 4201H into register B.
-Perform division using repeated subtraction.
-Store the quotient in 4300H and remainder in 4301H.
-Program:
+## Aim  
+To perform 8-bit arithmetic operations (**Addition, Subtraction, Multiplication, and Division**) using the 8085 microprocessor.  
+
+---
+
+## Apparatus Required  
+- Laptop with Internet connection  
+
+---
+
+## Algorithm  
+1. Load the first and second numbers from memory.  
+2. Perform the selected arithmetic operation (Add / Subtract / Multiply / Divide).  
+3. Store the result in the specified memory location.  
+4. Halt the program.  
+
+---
+
+## Program with Output  
+```asm
 ; ---------- ADDITION ----------
 LDA 4150H
 MOV B,A
@@ -75,13 +68,22 @@ MOV A,D
 STA 0024H
 
 HLT
-Output:
-image image image image
-➤ Final Output Summary
-Operation	Input (Example)	Result (Hex)	Result (Decimal)
-Addition	10, 2	0CH	12
-Subtraction	10, 2	08H	8
-Multiplication	10 × 2	14H	20
-Division	10 ÷ 2	05H / 00H	5 Quotient / 0 Remainder
-Result:
-The 8-bit arithmetic operations using the 8085 microprocessor have been successfully executed and verified using memory access for input and output.
+```
+## ➤ Final Output Summary  
+
+| Operation       | Input (Example) | Result (Hex) | Result (Decimal) |
+|-----------------|-----------------|--------------|------------------|
+| Addition        | 10, 2           | 0CH          | 12               |
+| Subtraction     | 10, 2           | 08H          | 8                |
+| Multiplication  | 10 × 2          | 14H          | 20               |
+| Division        | 10 ÷ 2          | 05H / 00H    | 5 Quotient / 0 Remainder |
+
+
+
+<img width="679" height="348" alt="image" src="https://github.com/user-attachments/assets/72034db1-02f5-450d-9cf7-201c836aadbf" />
+<img width="663" height="311" alt="image" src="https://github.com/user-attachments/assets/38a77aa5-375b-41bd-8241-7b5e1792d4ab" />
+<img width="664" height="308" alt="image" src="https://github.com/user-attachments/assets/164a09d1-8603-4765-8d36-bfc153496781" />
+<img width="662" height="315" alt="image" src="https://github.com/user-attachments/assets/179f4a51-fdf8-4417-b0ac-2e5698c669c6" />
+
+
+
